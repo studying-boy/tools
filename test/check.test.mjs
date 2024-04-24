@@ -1,4 +1,4 @@
-import { checkEmail, checkIdCard, checkPhone } from '../../core/check.js'
+import { checkEmail, checkIdCard, checkPhone } from '../core/check.js'
 
 describe('checkIdCard', () => {
     test('正确的身份证号码应该通过验证', () => {

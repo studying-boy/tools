@@ -1,4 +1,4 @@
-import { formatCustomTime, formatMoney } from '../../core/format.js'
+import { formatCustomTime, formatMoney } from '../core/format.js'
 
 describe('formatCustomTime', () => {
     test('formatCustomTime方法应该返回正确的日期格式', () => {
