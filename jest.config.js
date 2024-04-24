@@ -5,6 +5,5 @@ module.exports = {
   ],
   transform: {
     "^.+\.[j|t]sx?$": "babel-jest",
-    "^.+\.vue?$": "@vue/vue3-jest",
   }
 };
