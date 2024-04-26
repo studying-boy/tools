@@ -1,6 +1,6 @@
 {
   "name": "@liquansheng/lqs-tools",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "main": "./dist/index.esm.js",
   "keywords": [
     "javascript",
@@ -13,6 +13,7 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
+  "files": ["dist/*.js"],
   "scripts": {
     "prepare": "husky install",
     "lint": "lint-staged",
