@@ -1,3 +1,5 @@
+import commonjs from '@rollup/plugin-commonjs';
+import resolve from '@rollup/plugin-node-resolve';
 import { terser } from 'rollup-plugin-terser';
 
 export default {
@@ -7,5 +9,5 @@ export default {
         format: 'esm',
         entryFileNames: '[name].esm.js',
     },
-    plugins: [terser()],
+    plugins: [commonjs(), resolve(), terser()],
 };

@@ -70,7 +70,7 @@
             
             <nav>
                 
-                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Global</h3><ul><li><a href="global.html#checkEmail">checkEmail</a></li><li><a href="global.html#checkIdCard">checkIdCard</a></li><li><a href="global.html#checkPhone">checkPhone</a></li><li><a href="global.html#formatCustomTime">formatCustomTime</a></li><li><a href="global.html#formatMoney">formatMoney</a></li></ul></div>
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Global</h3><ul><li><a href="global.html#checkEmail">checkEmail</a></li><li><a href="global.html#checkIdCard">checkIdCard</a></li><li><a href="global.html#checkPhone">checkPhone</a></li><li><a href="global.html#formatCustomDateTime">formatCustomDateTime</a></li><li><a href="global.html#formatDate">formatDate</a></li><li><a href="global.html#formatMoney">formatMoney</a></li><li><a href="global.html#formatTime">formatTime</a></li><li><a href="global.html#translateImageUrl2Base64">translateImageUrl2Base64</a></li></ul></div>
                 
             </nav>
         </div>
@@ -677,12 +677,12 @@
 
 
     
-    <h4 class="name" id="formatCustomTime">
-        <a class="href-link" href="#formatCustomTime">#</a>
+    <h4 class="name" id="formatCustomDateTime">
+        <a class="href-link" href="#formatCustomDateTime">#</a>
         
         <span class="code-name">
             
-                formatCustomTime<span class="signature">(val, rule)</span><span class="type-signature"> &rarr; {String}</span>
+                formatCustomDateTime<span class="signature">(val, rule)</span><span class="type-signature"> &rarr; {String}</span>
             
         </span>
     </h4>
@@ -691,7 +691,7 @@
     
     
     <div class="description">
-        功能：将一个输入转成正确的时间格式
+        功能：将一个输入转成正确的日期时间格式
     </div>
     
 
@@ -773,7 +773,7 @@
 
   
 
-  <td class="description last">时间格式规则</td>
+  <td class="description last">日期时间格式规则，默认是'YYYY-MM-DD HH:mm:ss'</td>
 </tr>
 
 
@@ -822,6 +822,205 @@
             <a href="format.js.html" class="button">View Source</a>
             <span>
                 <a href="format.js.html">format.js</a>, <a href="format.js.html#line9">line 9</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">String</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="formatDate">
+        <a class="href-link" href="#formatDate">#</a>
+        
+        <span class="code-name">
+            
+                formatDate<span class="signature">(val, rule)</span><span class="type-signature"> &rarr; {String}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        功能：将一个输入转成正确的日期格式
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>val</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">String</code>
+|
+
+<code class="param-type">Number</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>rule</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">String</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">日期格式规则，默认是'YYYY-MM-DD'</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="format.js.html" class="button">View Source</a>
+            <span>
+                <a href="format.js.html">format.js</a>, <a href="format.js.html#line21">line 21</a>
             </span>
         </p>
     
@@ -995,7 +1194,7 @@
         <p class="tag-source">
             <a href="format.js.html" class="button">View Source</a>
             <span>
-                <a href="format.js.html">format.js</a>, <a href="format.js.html#line20">line 20</a>
+                <a href="format.js.html">format.js</a>, <a href="format.js.html#line40">line 40</a>
             </span>
         </p>
     
@@ -1031,6 +1230,426 @@
         <label>Type: </label>
         
 <code class="param-type">String</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="formatTime">
+        <a class="href-link" href="#formatTime">#</a>
+        
+        <span class="code-name">
+            
+                formatTime<span class="signature">(val, rule)</span><span class="type-signature"> &rarr; {String}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        功能：将一个输入转成正确的时间格式
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>val</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">String</code>
+|
+
+<code class="param-type">Number</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"></td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>rule</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">String</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">时间格式规则，默认是'YYYY-MM-DD'</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="format.js.html" class="button">View Source</a>
+            <span>
+                <a href="format.js.html">format.js</a>, <a href="format.js.html#line31">line 31</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">String</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="translateImageUrl2Base64">
+        <a class="href-link" href="#translateImageUrl2Base64">#</a>
+        
+        <span class="code-name">
+            
+                translateImageUrl2Base64<span class="signature">(imageUrl, fileType, quality)</span><span class="type-signature"> &rarr; {Promise}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        功能：image转换成base64
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>imageUrl</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">String</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">图片地址</td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>fileType</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">String</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">图片格式</td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>quality</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">Number</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">图片质量</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="translate.js.html" class="button">View Source</a>
+            <span>
+                <a href="translate.js.html">translate.js</a>, <a href="translate.js.html#line8">line 8</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise</code>
 
 
     </div>

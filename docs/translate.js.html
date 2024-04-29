@@ -7,7 +7,7 @@
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> format.js</title>
+  <title> translate.js</title>
 
   <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -80,7 +80,7 @@
             <div class="content">
                 <header class="page-title">
                     <p>Source</p>
-                    <h1>format.js</h1>
+                    <h1>translate.js</h1>
                 </header>
                 
 
@@ -89,49 +89,48 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import dayjs from 'dayjs'
-
-/**
- * 功能：将一个输入转成正确的日期时间格式
- * @param {String|Number} val
- * @param {String} rule 日期时间格式规则，默认是'YYYY-MM-DD HH:mm:ss'
- * @returns {String}
+            <pre class="prettyprint source linenums"><code>/**
+ * 功能：image转换成base64
+ * @param {String} imageUrl 图片地址
+ * @param {String} fileType 图片格式
+ * @param {Number} quality 图片质量
+ * @returns {Promise}
  */
-export function formatCustomDateTime(val, rule = 'YYYY-MM-DD HH:mm:ss') {
-  // 兼容时间戳必须用number类型，使用string会转换时间不对
-  const time = dayjs(!isNaN(val) ? Number(val) : val)
-  return time.isValid() ? time.format(rule) : ''
-}
-
-/**
- * 功能：将一个输入转成正确的日期格式
- * @param {String|Number} val
- * @param {String} rule 日期格式规则，默认是'YYYY-MM-DD'
- * @returns {String}
- */
-export function formatDate(val, rule = 'YYYY-MM-DD') {
-  return formatCustomDateTime(val, rule)
-}
-
-/**
- * 功能：将一个输入转成正确的时间格式
- * @param {String|Number} val
- * @param {String} rule 时间格式规则，默认是'YYYY-MM-DD'
- * @returns {String}
- */
-export function formatTime(val, rule = 'HH:mm:ss') {
-  return formatCustomDateTime(val, rule)
-}
-
-/**
- * 功能：金钱格式化
- * @param {String|Number} val
- * @returns {String}
- */
-export function formatMoney(val) {
-  return !isNaN(val) ? `${(parseFloat(val).toFixed(2) + '').replace(/\d{1,3}(?=(\d{3})+(\.\d*)?$)/g, '$&amp;,')}` : 'NaN'
-}
-</code></pre>
+export function translateImageUrl2Base64 (imageUrl, fileType = 'image/png', quality = 1.0) {
+    return new Promise((resolve, reject) => {
+      const canvas = document.createElement('canvas')
+      const ctx = canvas.getContext('2d')
+      
+      const handleLoad = () => {
+        const w = image.naturalWidth
+        const h = image.naturalHeight
+        canvas.width = w
+        canvas.height = h
+        ctx.drawImage(image, 0, 0, w, h, 0, 0, w, h)
+  
+        const base64 = canvas.toDataURL(fileType, quality)
+        resolve(base64)
+      }
+  
+      const handleError = () => {
+        reject({
+          errMsg: 'Image loading error.'
+        })
+      }
+  
+      if (!ctx) {
+        reject({
+          errMsg: 'Canvas context init error.'
+        })
+        return
+      }
+  
+      const image = new Image()
+      image.onload = handleLoad
+      image.onerror = handleError
+      image.src = imageUrl
+    })
+  }</code></pre>
         </article>
     </section>
 

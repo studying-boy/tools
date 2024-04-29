@@ -13,7 +13,9 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "files": ["dist/*.js"],
+  "files": [
+    "dist/*.js"
+  ],
   "scripts": {
     "prepare": "husky install",
     "lint": "lint-staged",
@@ -21,7 +23,7 @@
     "commit": "git-cz",
     "test": "jest",
     "tools:build": "rollup -c",
-    "doc:build": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose"
+    "docs:build": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose"
   },
   "dependencies": {
     "dayjs": "^1.11.10"
@@ -32,6 +34,8 @@
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
     "@commitlint/cz-commitlint": "^17.0.3",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
     "babel-eslint": "10.0.1",
     "babel-jest": "^29.7.0",
     "better-docs": "^2.7.3",
@@ -45,6 +49,7 @@
     "eslint-plugin-prettier": "^5.0.0",
     "husky": "^8.0.1",
     "jest": "^29.7.0",
+    "jest-canvas-mock": "^2.5.2",
     "jest-environment-jsdom": "^29.7.0",
     "jsdoc": "^4.0.2",
     "lint-staged": "^13.0.2",
