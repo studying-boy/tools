@@ -1,8 +1,11 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
+npm run docs:build
+git add docs
+git commit -m '更新文档' --no-verify
 npm run test
 npm run fix
 npm run lint
-npm run docs:build
+
 # npx lint-staged
