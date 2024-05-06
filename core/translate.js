@@ -16,7 +16,6 @@ export function translateImageUrl2Base64(imageUrl, fileType = 'image/png', quali
       canvas.width = w;
       canvas.height = h;
       ctx.drawImage(image, 0, 0, w, h, 0, 0, w, h);
-      console.log(canvas);
       const base64 = canvas.toDataURL(fileType, quality);
       resolve(base64);
     };
@@ -35,7 +34,7 @@ export function translateImageUrl2Base64(imageUrl, fileType = 'image/png', quali
     }
 
     const image = new Image();
-    image.setAttribute("crossOrigin",'Anonymous');
+    image.setAttribute('crossOrigin', 'Anonymous');
     image.onload = handleLoad;
     image.onerror = handleError;
     image.src = imageUrl;

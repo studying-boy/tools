@@ -6,6 +6,5 @@ git add docs
 npm run test
 npm run fix
 npm run lint
-git push
 
 # npx lint-staged
