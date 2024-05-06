@@ -3,7 +3,7 @@
 
 npm run docs:build
 git add docs
-git commit -m '更新文档' --no-verify
+git commit --reuse-message=HEAD --no-edit --no-verify
 npm run test
 npm run fix
 npm run lint
