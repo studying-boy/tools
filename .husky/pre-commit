@@ -3,7 +3,6 @@
 
 npm run docs:build
 git add docs
-git commit --reuse-message=HEAD --no-edit --no-verify
 npm run test
 npm run fix
 npm run lint
