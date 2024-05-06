@@ -1,6 +1,6 @@
 {
   "name": "@liquansheng/lqs-tools",
-  "version": "1.1.0",
+  "version": "1.1.4",
   "main": "./dist/index.esm.js",
   "keywords": [
     "javascript",
@@ -23,7 +23,8 @@
     "commit": "git-cz",
     "test": "jest",
     "tools:build": "rollup -c",
-    "docs:build": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose"
+    "docs:build": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose",
+    "tools:publish": "npm run tools:build && npm publish"
   },
   "dependencies": {
     "dayjs": "^1.11.10"
