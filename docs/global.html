@@ -5,7 +5,7 @@
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Global</title>
+  <title>lqs-tools文档 Global</title>
 
   <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -56,6 +56,15 @@
                     Documentation
                 </a>
                 
+                 
+                    
+                        <a
+                            class="link user-link "
+                            href="https://github.com/studying-boy/tools"
+                        >
+                            Github
+                        </a>
+                    
                 
                 
             </div>
@@ -67,6 +76,10 @@
             class="sidebar "
             id="sidebarNav"
         >
+            
+                <div class="search-wrapper">
+                    <input id="search" type="text" placeholder="Search docs..." class="input">
+                </div>
             
             <nav>
                 
@@ -1451,6 +1464,10 @@
     <h4 class="name" id="translateImageUrl2Base64">
         <a class="href-link" href="#translateImageUrl2Base64">#</a>
         
+            
+                <span class='tag'>async</span>
+            
+        
         <span class="code-name">
             
                 translateImageUrl2Base64<span class="signature">(imageUrl, fileType, quality)</span><span class="type-signature"> &rarr; {Promise}</span>
@@ -1614,7 +1631,7 @@
         <p class="tag-source">
             <a href="translate.js.html" class="button">View Source</a>
             <span>
-                <a href="translate.js.html">translate.js</a>, <a href="translate.js.html#line8">line 8</a>
+                <a href="translate.js.html">translate.js</a>, <a href="translate.js.html#line13">line 13</a>
             </span>
         </p>
     
@@ -1663,6 +1680,15 @@
 
 
 
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>方式一：translateImageUrl2Base64(imageUrl).then(base64Url => { xxx }) 
+
+方式二：const base64Url = await translateImageUrl2Base64(imageUrl)</code></pre>
+    
+
+
 </div>
             
             </div>
@@ -1698,6 +1724,8 @@
 <script src="scripts/app.min.js"></script>
 <script>PR.prettyPrint();</script>
 <script src="scripts/linenumber.js"> </script>
+
+<script src="scripts/search.js"> </script>
 
 
 </body>

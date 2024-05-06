@@ -16,10 +16,18 @@
         "template": "node_modules/better-docs"
     },
     "templates": {
+        "cleverLinks": false,
+        "monospaceLinks": false,
+        "search": true,
         "better-docs": {
             "name": "lqs-tools",
-            "cleverLinks": false,
-            "monospaceLinks": true
+            "title": "lqs-tools文档",
+            "navLinks": [
+                {
+                    "label": "Github",
+                    "href": "https://github.com/studying-boy/tools"
+                }
+            ]
         }
     }
 }

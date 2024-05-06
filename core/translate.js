@@ -1,9 +1,14 @@
 /**
  * 功能：image转换成base64
+ * @async
  * @param {String} imageUrl 图片地址
  * @param {String} fileType 图片格式
  * @param {Number} quality 图片质量
  * @returns {Promise}
+ * @example
+ * 方式一：translateImageUrl2Base64(imageUrl).then(base64Url => { xxx })
+ *
+ * 方式二：const base64Url = await translateImageUrl2Base64(imageUrl)
  */
 export function translateImageUrl2Base64(imageUrl, fileType = 'image/png', quality = 1.0) {
   return new Promise((resolve, reject) => {

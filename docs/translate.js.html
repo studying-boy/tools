@@ -7,7 +7,7 @@
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> translate.js</title>
+  <title>lqs-tools文档 translate.js</title>
 
   <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -58,6 +58,15 @@
                     Documentation
                 </a>
                 
+                 
+                    
+                        <a
+                            class="link user-link "
+                            href="https://github.com/studying-boy/tools"
+                        >
+                            Github
+                        </a>
+                    
                 
                 
             </div>
@@ -69,6 +78,10 @@
             class="sidebar "
             id="sidebarNav"
         >
+            
+                <div class="search-wrapper">
+                    <input id="search" type="text" placeholder="Search docs..." class="input">
+                </div>
             
             <nav>
                 
@@ -91,10 +104,15 @@
         <article>
             <pre class="prettyprint source linenums"><code>/**
  * 功能：image转换成base64
+ * @async
  * @param {String} imageUrl 图片地址
  * @param {String} fileType 图片格式
  * @param {Number} quality 图片质量
  * @returns {Promise}
+ * @example
+ * 方式一：translateImageUrl2Base64(imageUrl).then(base64Url => { xxx }) 
+ * 
+ * 方式二：const base64Url = await translateImageUrl2Base64(imageUrl)
  */
 export function translateImageUrl2Base64(imageUrl, fileType = 'image/png', quality = 1.0) {
   return new Promise((resolve, reject) => {
@@ -125,7 +143,7 @@ export function translateImageUrl2Base64(imageUrl, fileType = 'image/png', quali
     }
 
     const image = new Image();
-    image.setAttribute("crossOrigin",'Anonymous');
+    image.setAttribute('crossOrigin', 'Anonymous');
     image.onload = handleLoad;
     image.onerror = handleError;
     image.src = imageUrl;
@@ -157,6 +175,8 @@ export function translateImageUrl2Base64(imageUrl, fileType = 'image/png', quali
 <script src="scripts/app.min.js"></script>
 <script>PR.prettyPrint();</script>
 <script src="scripts/linenumber.js"> </script>
+
+<script src="scripts/search.js"> </script>
 
 
 </body>
