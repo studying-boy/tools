@@ -15,3 +15,6 @@ git add xxx
 
 ### 工程化提交代码，途中会进行单元测试，如不通过，不会提交代码。通过的话，会打包输出使用文档
 npm run commit
+
+### 发版，增加修改日志
+npm run release
