@@ -1,6 +1,6 @@
 {
   "name": "@liquansheng/lqs-tools",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "main": "./dist/index.esm.js",
   "keywords": [
     "javascript",
@@ -22,7 +22,7 @@
     "fix": "eslint --fix --ext .js core",
     "commit": "git-cz",
     "test": "jest",
-    "release": "standard-version",
+    "release": "standard-version && git push --follow-tags",
     "tools:build": "rollup -c",
     "tools:publish": "npm run tools:build && npm publish",
     "docs:build": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose",
